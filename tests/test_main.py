@@ -103,3 +103,11 @@ def test_avg_removes_lower_outliers():
     result = calculator.avg([2, 5, 12, 98], lt=10)
 
     assert result == pytest.approx(55)
+
+
+def test_avg_uppper_threshold_is_included():
+    calculator = SimpleCalculator()
+
+    result = calculator.avg([2, 5, 12, 98], ut=98)
+
+    assert result == 29.25
