@@ -1,6 +1,6 @@
 # SimpleCalculator
 
-A basic calculator written in Python used to teach TDD. This is a companion repository for a series of posts on [The Digital Cat](https://www.thedigitalcatonline.com)
+A basic calculator written in Python used to learn TDD.
 
 ## Credits
 
