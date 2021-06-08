@@ -13,3 +13,11 @@ def test_add_three_numbers():
     calculator = SimpleCalculator()
     result = calculator.add(4, 5, 6)
     assert result == 15, "Sum of 4,5 and 6 should be 15"
+
+
+def test_add_many_numbers():
+    """Tests if the sum of hundred numbers behave as expected"""
+    numbers = range(100)
+    calculator = SimpleCalculator()
+    result = calculator.add(*numbers)
+    assert result == 4950, "Sum of numbers from 1 to 100 should be 4950"
