@@ -36,3 +36,11 @@ def test_mul_two_numbers():
     calculator = SimpleCalculator()
     result = calculator.mul(6, 4)
     assert result == 24
+
+
+def test_mul_many_numbers():
+    """Test if the multiplication of ten numbers behaves as expected"""
+    numbers = range(1, 10)
+    calculator = SimpleCalculator()
+    result = calculator.mul(*numbers)
+    assert result == 362880, "Multiplication of numbers from 1 to 9 should be 362880"
