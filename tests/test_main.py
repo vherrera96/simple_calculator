@@ -1,5 +1,5 @@
+import pytest
 from simple_calculator.main import SimpleCalculator
-
 
 def test_add_two_numbers():
     """Tests if add method behaves as expected"""

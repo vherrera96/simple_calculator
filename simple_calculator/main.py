@@ -1,3 +1,4 @@
+
 class SimpleCalculator:
     def add(self, *args) -> int or float:
         """Performs the sum from the input.
