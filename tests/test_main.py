@@ -21,3 +21,9 @@ def test_add_many_numbers():
     calculator = SimpleCalculator()
     result = calculator.add(*numbers)
     assert result == 4950, "Sum of numbers from 1 to 100 should be 4950"
+
+def test_subtract_two_numbers():
+    """Tests if subtraction of two numbers behaves as expected"""
+    calculator = SimpleCalculator()
+    result = calculator.sub(10, 3)
+    assert result == 7, "Subtract 3 from 10 should be 7"
