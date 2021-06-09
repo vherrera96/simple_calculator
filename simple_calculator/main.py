@@ -7,3 +7,15 @@ class SimpleCalculator:
             int or float: sum from input.
         """
         return sum(args)
+
+    def sub(self, a: int or float, b: int or float) -> int or float:
+        """Performs subtraction between two numbers
+
+        Args:
+            a (int or float): Subtract from.
+            b (int or float): To subtract.
+
+        Returns:
+            int or float: Subtraction
+        """
+        return a - b
