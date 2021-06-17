@@ -51,3 +51,10 @@ def test_div_two_numbers_float():
     calculator = SimpleCalculator()
     result = calculator.div(13, 2)
     assert result == 6.5, "13 divided by 2 is 6.5!"
+
+
+def test_div_by_zero_returns_inf():
+    """Tests if division by 0 return inf."""
+    calculator = SimpleCalculator()
+    result = calculator.div(5, 0)
+    assert result == float('inf')
