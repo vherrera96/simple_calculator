@@ -30,3 +30,18 @@ class SimpleCalculator:
             Union[int, float]: Result of multiplication.
         """
         return reduce(lambda x, y: x * y, args)
+
+    def div(self, a: Union[int, float], b: Union[int, float]) -> Union[int, float]:
+        """Performs division between a numbers.
+
+        Args:
+            a (Union[int, float]): Divides from.
+            b (Union[int, float]): Divided by.
+
+        Returns:
+            Union[int, float]: Result of division of a by b. If b is zero result is inf.fe
+        """
+        try:
+            return a/b
+        except ZeroDivisionError:
+            return float('inf')
