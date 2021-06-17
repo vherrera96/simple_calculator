@@ -1,4 +1,5 @@
 from functools import reduce
+from typing import Union
 
 
 class SimpleCalculator:
@@ -22,10 +23,10 @@ class SimpleCalculator:
         """
         return a - b
 
-    def mul(self, *args) -> int or float:
-        """[summary]
+    def mul(self, *args) -> Union[int, float]:
+        """Performs multiplication between numbers.
 
         Returns:
-            int or float: [description]
+            Union[int, float]: Result of multiplication.
         """
         return reduce(lambda x, y: x * y, args)
