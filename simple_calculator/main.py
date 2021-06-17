@@ -1,3 +1,5 @@
+from functools import reduce
+
 
 class SimpleCalculator:
     def add(self, *args) -> int or float:
@@ -19,3 +21,11 @@ class SimpleCalculator:
             int or float: Subtraction
         """
         return a - b
+
+    def mul(self, *args) -> int or float:
+        """[summary]
+
+        Returns:
+            int or float: [description]
+        """
+        return reduce(lambda x, y: x * y, args)
