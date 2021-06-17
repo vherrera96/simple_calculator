@@ -27,7 +27,7 @@ class SimpleCalculator:
         """Performs multiplication between numbers.
 
         Returns:
-            Union[int, float]: Result of multiplication.
+            Union[int, float]: Result of multiplication. Raise ValueError if any zero on args.
         """
         if not all(args):
             raise ValueError
