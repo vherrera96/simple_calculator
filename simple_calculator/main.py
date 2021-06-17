@@ -29,6 +29,8 @@ class SimpleCalculator:
         Returns:
             Union[int, float]: Result of multiplication.
         """
+        if not all(args):
+            raise ValueError
         return reduce(lambda x, y: x * y, args)
 
     def div(self, a: Union[int, float], b: Union[int, float]) -> Union[int, float]:
