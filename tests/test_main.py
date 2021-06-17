@@ -44,3 +44,10 @@ def test_mul_many_numbers():
     calculator = SimpleCalculator()
     result = calculator.mul(*numbers)
     assert result == 362880, "Multiplication of numbers from 1 to 9 should be 362880"
+
+
+def test_div_two_numbers_float():
+    """Tests if the division of two numbers is a float"""
+    calculator = SimpleCalculator()
+    result = calculator.div(13, 2)
+    assert result == 6.5, "13 divided by 2 is 6.5!"
