@@ -1,6 +1,7 @@
 import pytest
 from simple_calculator.main import SimpleCalculator
 
+
 def test_add_two_numbers():
     """Tests if add method behaves as expected"""
     calculator = SimpleCalculator()
@@ -22,8 +23,24 @@ def test_add_many_numbers():
     result = calculator.add(*numbers)
     assert result == 4950, "Sum of numbers from 1 to 100 should be 4950"
 
+
 def test_subtract_two_numbers():
     """Tests if subtraction of two numbers behaves as expected"""
     calculator = SimpleCalculator()
     result = calculator.sub(10, 3)
     assert result == 7, "Subtract 3 from 10 should be 7"
+
+
+def test_mul_two_numbers():
+    """Test if multiplication of two numbers behaves as expected"""
+    calculator = SimpleCalculator()
+    result = calculator.mul(6, 4)
+    assert result == 24
+
+
+def test_mul_many_numbers():
+    """Test if the multiplication of ten numbers behaves as expected"""
+    numbers = range(1, 10)
+    calculator = SimpleCalculator()
+    result = calculator.mul(*numbers)
+    assert result == 362880, "Multiplication of numbers from 1 to 9 should be 362880"
