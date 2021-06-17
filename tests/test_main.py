@@ -58,3 +58,10 @@ def test_div_by_zero_returns_inf():
     calculator = SimpleCalculator()
     result = calculator.div(5, 0)
     assert result == float('inf')
+
+
+def test_mul_by_zero_raises_expection():
+    """Tests if multiplication by raise a ValueError."""
+    calculator = SimpleCalculator()
+    with pytest.raises(ValueError):
+        calculator.mul(3, 0)
