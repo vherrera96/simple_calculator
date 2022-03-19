@@ -83,3 +83,9 @@ def test_avg_lower_threshold():
     """Tests average computation with lower threshold"""
     calculator = SimpleCalculator()
     assert calculator.avg([2, 5, 12, 98], lt=10) == calculator.avg([12, 98])
+
+
+def test_avg_upper_threshold_not_included():
+    """Tests that the upper threshold is not included when removing outliers"""
+    calculator = SimpleCalculator()
+    assert calculator.avg([2, 5, 12, 98], ut=12) == calculator.avg([2, 5, 12])
