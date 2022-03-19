@@ -1,5 +1,5 @@
 from functools import reduce
-from typing import Union
+from typing import Union, Iterable
 
 
 class SimpleCalculator:
@@ -47,3 +47,6 @@ class SimpleCalculator:
             return a/b
         except ZeroDivisionError:
             return float('inf')
+
+    def avg(self, it: Iterable):
+        return sum(it)/len(it)

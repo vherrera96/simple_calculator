@@ -65,3 +65,9 @@ def test_mul_by_zero_raises_expection():
     calculator = SimpleCalculator()
     with pytest.raises(ValueError):
         calculator.mul(3, 0)
+
+
+def test_avg_iter():
+    """Tests average computation, with no threshold"""
+    calculator = SimpleCalculator()
+    assert calculator.avg([2, 5, 12, 98]) == 29.25
