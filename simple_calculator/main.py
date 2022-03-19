@@ -51,6 +51,6 @@ class SimpleCalculator:
     def avg(self, it: Iterable, ut=None, lt=None):
         if ut:
             it = list(filter(lambda x: x <= ut, it))
-        elif lt:
+        if lt:
             it = list(filter(lambda x: x >= lt, it))
         return sum(it)/(len(it) or 1)
