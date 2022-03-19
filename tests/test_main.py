@@ -95,3 +95,9 @@ def test_avg_lower_threshold_not_included():
     """Tests if the lower threshold is not included when removing data"""
     calculator = SimpleCalculator()
     assert calculator.avg([2, 5, 12, 98], lt=5) == calculator.avg([5, 12, 98])
+
+
+def test_avg_empty_list():
+    """Tests if avg works with an empty list"""
+    calculator = SimpleCalculator()
+    assert calculator.avg([]) == 0
