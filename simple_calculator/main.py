@@ -48,5 +48,7 @@ class SimpleCalculator:
         except ZeroDivisionError:
             return float('inf')
 
-    def avg(self, it: Iterable):
+    def avg(self, it: Iterable, ut=None):
+        if ut:
+            it = list(filter(lambda x: x < ut, it))
         return sum(it)/len(it)

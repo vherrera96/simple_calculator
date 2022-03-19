@@ -67,7 +67,13 @@ def test_mul_by_zero_raises_expection():
         calculator.mul(3, 0)
 
 
-def test_avg_iter():
+def test_avg():
     """Tests average computation, with no threshold"""
     calculator = SimpleCalculator()
     assert calculator.avg([2, 5, 12, 98]) == 29.25
+
+
+def test_avg_upper_threshold():
+    """Tests average computation with upper threshold"""
+    calculator = SimpleCalculator()
+    assert calculator.avg([2, 5, 12, 98], ut=90) == calculator.avg([2, 5, 12])
