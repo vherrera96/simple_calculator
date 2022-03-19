@@ -52,5 +52,5 @@ class SimpleCalculator:
         if ut:
             it = list(filter(lambda x: x <= ut, it))
         elif lt:
-            it = list(filter(lambda x: x > lt, it))
+            it = list(filter(lambda x: x >= lt, it))
         return sum(it)/len(it)
