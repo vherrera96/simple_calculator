@@ -104,6 +104,12 @@ def test_avg_empty_list():
 
 
 def test_avg_empty_after_outlier_removal():
-    "Test if avg works if the list is empty after outlier removal"
+    """Test if avg works if the list is empty after outlier removal"""
     calculator = SimpleCalculator()
     assert calculator.avg([12, 98], lt=15, ut=90) == 0
+
+
+def test_avg_empty_list_with_outlier_removal():
+    """Test if avg works if the list is empty before outlier removal"""
+    calculator = SimpleCalculator()
+    assert calculator.avg([], lt=15, ut=90) == 0
